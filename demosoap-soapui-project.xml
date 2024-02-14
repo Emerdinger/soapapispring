@@ -34,7 +34,7 @@
       <xs:element name="getProductByIdRequest">
         <xs:complexType>
           <xs:sequence>
-            <xs:element name="id" type="xs:int"/>
+            <xs:element name="id" type="xs:string"/>
           </xs:sequence>
         </xs:complexType>
       </xs:element>
@@ -55,7 +55,7 @@
       </xs:element>
       <xs:complexType name="product">
         <xs:sequence>
-          <xs:element name="id" type="xs:int"/>
+          <xs:element name="id" type="xs:string"/>
           <xs:element name="name" type="xs:string"/>
           <xs:element name="price" type="xs:double"/>
           <xs:element name="description" type="xs:string"/>
@@ -150,14 +150,14 @@
    <soapenv:Header/>\r
    <soapenv:Body>\r
       <gen:getProductRequest>\r
-         <gen:name>Laptop Gamer</gen:name>\r
+         <gen:name>Lavadora</gen:name>\r
       </gen:getProductRequest>\r
    </soapenv:Body>\r
 </soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://www.example.com/demosoap/gen/productPort/getProductByIdRequest"/><con:wsrmConfig version="1.2"/></con:call></con:operation><con:operation id="20e7da70-1cb8-4502-9c6f-6a80aa72d4e7" isOneWay="false" action="" name="getProductById" bindingOperationName="getProductById" type="Request-Response" outputName="getProductResponse" inputName="getProductByIdRequest" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="76846fb8-abf3-46e0-b6fe-a199e23f0b77" name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8080/ws</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:gen="http://www.example.com/demosoap/gen">\r
    <soapenv:Header/>\r
    <soapenv:Body>\r
       <gen:getProductByIdRequest>\r
-         <gen:id>1</gen:id>\r
+         <gen:id>65cb83607ac56616052bc649</gen:id>\r
       </gen:getProductByIdRequest>\r
    </soapenv:Body>\r
 </soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://www.example.com/demosoap/gen/productPort/getProductRequest"/><con:wsrmConfig version="1.2"/></con:call></con:operation><con:operation id="20e7da70-1cb8-4502-9c6f-6a80aa72d4e7" isOneWay="false" action="" name="getProducts" bindingOperationName="getProducts" type="Request-Response" outputName="getProductsResponse" inputName="getProductsRequest" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="76846fb8-abf3-46e0-b6fe-a199e23f0b77" name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8080/ws</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:gen="http://www.example.com/demosoap/gen">\r
@@ -170,10 +170,10 @@
    <soapenv:Body>\r
       <gen:postProductRequest>\r
          <gen:product>\r
-            <gen:id>0</gen:id>\r
-            <gen:name>Laptop Gamer</gen:name>\r
-            <gen:price>500.50</gen:price>\r
-            <gen:description>Powerfull laptop</gen:description>\r
+            <gen:id>65cb83927ac56616052bc64a</gen:id>
+            <gen:name>Freidora de aire</gen:name>\r
+            <gen:price>250</gen:price>\r
+            <gen:description>Freidora de aire multifuncional</gen:description>\r
          </gen:product>\r
       </gen:postProductRequest>\r
    </soapenv:Body>\r

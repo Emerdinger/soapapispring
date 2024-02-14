@@ -11,6 +11,7 @@ import org.springframework.ws.server.endpoint.annotation.RequestPayload;
 import org.springframework.ws.server.endpoint.annotation.ResponsePayload;
 
 import java.util.List;
+import java.util.Optional;
 
 @Endpoint
 public class ProductEndpoint {
@@ -36,8 +37,8 @@ public class ProductEndpoint {
     @ResponsePayload
     public GetProductResponse getProductById(@RequestPayload GetProductByIdRequest request) {
         GetProductResponse response = new GetProductResponse();
-        ProductModel productModel = productRepository.findById(request.getId());
-        response.setProduct(productConverter.convertProductModelToProduct(productModel));
+        Optional<ProductModel> productModel = productRepository.findById(request.getId());
+        response.setProduct(productConverter.convertProductModelToProduct(productModel.get()));
         return response;
     }
     
